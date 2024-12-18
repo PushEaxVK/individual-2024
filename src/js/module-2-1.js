@@ -27,7 +27,6 @@ function temperatureStatus(temp) {
   } else {
     return 'Спекотно';
   }
-  // Реалізація функції тут
 }
 
 console.log('Задача-3:', temperatureStatus(15));
@@ -76,7 +75,6 @@ function checkDayStatus(dayOfWeek, isHoliday) {
   } else {
     return 'Робочий день';
   }
-  // Реалізація функції тут
 }
 
 console.log('Задача-7:', checkDayStatus('Saturday', true));
@@ -139,3 +137,87 @@ function checkSpeed(speed) {
 }
 
 console.log('Задача-12:', checkSpeed(75));
+
+// Задача-13
+function checkTimeAndDay(time, isWeekend) {
+  if (time < 12 && !isWeekend) {
+    return 'Ранок буднього дня';
+  } else if (time > 12 && time < 18 && isWeekend) {
+    return 'День вихідного дня';
+  } else {
+    return 'Вечір';
+  }
+}
+
+console.log('Задача-13:', checkTimeAndDay(11, false));
+
+// Задача-14
+function checkFoodAllergy(hasGlutenAllergy, containsGluten) {
+  return hasGlutenAllergy && containsGluten ? 'Не можна їсти' : 'Можна їсти';
+}
+
+console.log('Задача-14:', checkFoodAllergy(true, true));
+
+// Задача-15
+function canBuyAlcohol(age) {
+  return age < 18 ? 'Не можна купувати алкоголь' : 'Можна купувати алкоголь';
+}
+
+console.log('Задача-15:', canBuyAlcohol(20));
+
+// Задача-16
+function planForWeather(isSunny) {
+  if (isSunny) {
+    return 'Вийдемо на прогулянку';
+  } else {
+    return 'Залишимося вдома';
+  }
+}
+
+console.log('Задача-16:', planForWeather(true));
+
+// Задача-17
+function checkEvenOdd(number) {
+  return number % 2 === 0 ? 'Парне' : 'Непарне';
+}
+
+console.log('Задача-17:', checkEvenOdd(7));
+
+// Задача-18
+function verifyPasswords(password, confirmPassword) {
+  if (password === confirmPassword) {
+    return 'Паролі збігаються';
+  } else {
+    return 'Паролі не збігаються';
+  }
+}
+
+console.log('Задача-18:', verifyPasswords('12345', '12345'));
+
+// Задача-19
+function determineSeason(temperature) {
+  if (temperature < 0) {
+    return 'Зима';
+  } else if (temperature <= 15) {
+    return 'Весна';
+  } else if (temperature <= 25) {
+    return 'Літо';
+  } else {
+    return 'Осінь';
+  }
+}
+
+console.log('Задача-19:', determineSeason(16));
+
+// Задача-20
+function compareNumbers(number1, number2) {
+  if (number1 > number2) {
+    return 'Перше більше';
+  } else if (number1 < number2) {
+    return 'Перше менше';
+  } else {
+    return 'Рівні';
+  }
+}
+
+console.log('Задача-20:', compareNumbers(10, 20));
