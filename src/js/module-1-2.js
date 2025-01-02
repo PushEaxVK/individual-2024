@@ -328,3 +328,5 @@ function pillars(numPill, dist, width) {
   }
 }
 console.log('Kata 5. Pillars:', pillars(11, 15, 30));
+
+// Complete!
