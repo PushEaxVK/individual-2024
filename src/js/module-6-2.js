@@ -96,6 +96,24 @@ console.log(
 // Клас Rectangle: Напишіть клас Rectangle, який представлятиме прямокутник з
 // методами для обчислення його площі та периметра. Конструктор клас повинен
 // приймати довжини двох сторін.
+class Rectangle {
+  constructor(a, b) {
+    this.a = a;
+    this.b = b;
+  }
+
+  getArea() {
+    return this.a * this.b;
+  }
+
+  getPerimeter() {
+    return (this.a + this.b) * 2;
+  }
+}
+
+const rectangle = new Rectangle(3, 4);
+console.log('Task 3, getArea:', rectangle.getArea());
+console.log('Task 3, getPerimeter:', rectangle.getPerimeter());
 
 // ---
 
@@ -103,6 +121,26 @@ console.log(
 // description та completed. Потім реалізуйте клас ToDoList, який зберігатиме
 // список задач та методи для додавання нових завдань, позначки задачі як виконаної
 // та виведення списку завдань.
+
+class Task { 
+  constructor(params) { 
+    this.title = params.title;
+    this.description = params.description;
+    this.completed = params.completed;
+  }
+}
+
+class ToDoList {
+  constructor() {
+    this.tasks = [];
+  }
+
+  addTask(task) {
+    this.tasks.push(task);
+  }
+
+  
+}
 
 // ---
 
